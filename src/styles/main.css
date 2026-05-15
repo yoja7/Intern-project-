@@ -328,3 +328,418 @@ a:hover { text-decoration: underline; }
 
 /* ─── Badge opacity fix for Bootstrap bg-opacity utilities ───────────────────── */
 .badge.bg-opacity-15 { --bs-bg-opacity: 0.15; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Home / Landing Page — Redesigned
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #f0f4ff 0%, #f8f9fa 50%, #ffffff 100%);
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Badge pill above headline */
+.home-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e8f0fe;
+  color: #0d6efd;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* Main headline */
+.home-headline {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.home-headline-accent {
+  background: linear-gradient(135deg, #0d6efd, #6f42c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-subtext {
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+/* CTA buttons */
+.home-btn-primary {
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(13, 110, 253, 0.3);
+}
+
+.home-btn-primary:hover {
+  background: #0b5ed7;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.35);
+  opacity: 1;
+}
+
+.home-btn-secondary {
+  background: #fff;
+  color: #374151;
+  border: 1.5px solid #d1d5db;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.home-btn-secondary:hover {
+  border-color: #0d6efd;
+  color: #0d6efd;
+  background: #f0f4ff;
+  opacity: 1;
+}
+
+.home-trust {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Hero image */
+.home-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.home-hero-img {
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Features section */
+.home-features-section {
+  padding: 3rem 0 2rem;
+}
+
+.home-section-title {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.home-section-sub {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.home-feature-card {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 14px;
+  padding: 1.5rem;
+  height: 100%;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.home-feature-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.home-feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.home-feature-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.4rem;
+}
+
+.home-feature-desc {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* CTA Banner */
+.home-cta-banner {
+  background: linear-gradient(135deg, #0d6efd 0%, #6f42c1 100%);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  color: #fff;
+}
+
+.home-cta-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.home-cta-sub {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.home-cta-banner .home-btn-primary {
+  background: #fff;
+  color: #0d6efd;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.home-cta-banner .home-btn-primary:hover {
+  background: #f0f4ff;
+  color: #0b5ed7;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Dashboard — Redesigned
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Header banner */
+.dash-header {
+  background: linear-gradient(135deg, #0d6efd 0%, #6f42c1 100%);
+  padding: 1.75rem 2rem;
+  color: #fff;
+}
+
+.dash-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dash-greeting {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.dash-greeting-name {
+  color: #bfdbfe;
+}
+
+.dash-quote {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.dash-action-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  transition: background 0.2s;
+}
+
+.dash-action-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  opacity: 1;
+}
+
+.dash-action-btn-ghost {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  transition: background 0.2s;
+}
+
+.dash-action-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  opacity: 1;
+}
+
+/* Stat cards */
+.dash-stat-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  padding: 1.1rem 1rem;
+  height: 100%;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.dash-stat-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
+}
+
+.dash-stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.dash-stat-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+}
+
+.dash-stat-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+/* Dashboard cards */
+.dash-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e9ecef;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.dash-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.dash-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+.dash-card-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dash-card-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.dash-card-link {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0d6efd;
+  text-decoration: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  background: #e8f0fe;
+  transition: background 0.2s;
+}
+
+.dash-card-link:hover {
+  background: #d0e4ff;
+  text-decoration: none;
+}
+
+.dash-card-body {
+  padding: 1rem 1.25rem;
+}
+
+/* Activity list */
+.dash-activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+}
+
+.dash-activity-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0d6efd;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.dash-activity-action {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.dash-activity-task {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.dash-activity-task:hover {
+  text-decoration: underline;
+}
+
+.dash-activity-desc {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 1px;
+}
+
+.dash-activity-time {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+@media (max-width: 575.98px) {
+  .dash-header { padding: 1.25rem 1rem; }
+  .dash-greeting { font-size: 1.2rem; }
+  .dash-stat-value { font-size: 1.3rem; }
+}
